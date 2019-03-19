@@ -11,13 +11,13 @@ class SideBar extends React.Component {
   getEditorData () {
     return [
       { type: 'wall',       needsLoop: false, generateElems: ElementUtils.generateWallsFromPoints  },
-      { type: 'floor',      needsLoop: true,  generateElems: ElementUtils.generateFloorsFromPoints },
-      { type: 'door',       needsLoop: false, generateElems: null },
-      { type: 'window',     needsLoop: false, generateElems: null },
-      { type: 'ceiling',    needsLoop: false, generateElems: null },
-      { type: 'roof',       needsLoop: false, generateElems: null },
-      { type: 'component',  needsLoop: false, generateElems: null },
-      { type: 'column',     needsLoop: false, generateElems: null }
+      { type: 'floor',      needsLoop: true,  generateElems: ElementUtils.generateFloorsFromPoints }
+      // { type: 'door',       needsLoop: false, generateElems: null },
+      // { type: 'window',     needsLoop: false, generateElems: null },
+      // { type: 'ceiling',    needsLoop: false, generateElems: null },
+      // { type: 'roof',       needsLoop: false, generateElems: null },
+      // { type: 'component',  needsLoop: false, generateElems: null },
+      // { type: 'column',     needsLoop: false, generateElems: null }
     ];
   };
 

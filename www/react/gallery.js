@@ -48,7 +48,7 @@ class Gallery extends React.Component {
   render () {
     return (
       <div id='side-bar'>
-        <div className="forge-gallery">
+        <div className="forge-gallery gallery">
             <div className="container">
                 <div className="row">
                     {tilesData.map((tile, index) =>

@@ -13,7 +13,7 @@ html, body {
 #container {
   display: grid;
   height: 100vh;
-  grid-template-columns: auto 325px;
+  grid-template-columns: auto 320px;
   --header-height: 50px;
   --footer-height: 30px;
   grid-template-rows: var(--header-height) auto var(--footer-height);
@@ -87,6 +87,10 @@ html, body {
 
 #editors {
   grid-area: editors;
+}
+
+#gallery {
+  grid-area: gallery;
 }
 
 #thumbnail {
@@ -164,6 +168,7 @@ html, body {
 
 .forge-gallery .tile {
   border-radius: 5px;
+  margin-top: 4em;
   margin-bottom: 1em;
   position: relative;
 }
@@ -172,12 +177,12 @@ html, body {
   border-radius: 5px;
   box-shadow: 1px 1px 5px 1px rgb(27, 52, 106);
   height: auto;
-  max-width: 80%;
+  max-width: 50%;
 }
 
 .forge-gallery .tile .tile-title {
   bottom: 0;
-  width: calc(100% - 63px);
+  width: calc(70% - 63px);
   background-color: rgba(80, 80, 80, .5);
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
