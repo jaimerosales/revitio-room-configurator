@@ -2,19 +2,20 @@ import React from 'react';
 import ReduxUtils from '../utils/redux_utils';
 import Thumbnail from './thumbnail';
 import ElementUtils from '../utils/element_utils';
+import Helpers from './viewer-helpers';
 
 const tilesData = [
     {
       img: 'res/table.png',
       title: 'Table',
       key: '0001',
-      urn:'urn:'
+      urn:'urn:dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6amFpbWVfcm9vbWNvbmZpZ3VyYXRvcl9za2V0Y2hpdF9yZXZpdGlvL3RhYmxlLnJ2dA'
     },
     {
       img: 'res/chair.png',
       title: 'Chair',
       key: '0002',
-      urn: 'urn:'
+      urn: 'urn:dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6amFpbWVfcm9vbWNvbmZpZ3VyYXRvcl9za2V0Y2hpdF9yZXZpdGlvL2NoYWlyLnJ2dA'
     },
     {
       img: 'res/refrigerator.png',
@@ -34,17 +35,12 @@ const tilesData = [
 
 class Gallery extends React.Component {
 
-    onTileSelect(tile, e) {
-        e.preventDefault();
-        console.log("Launching new model");
-        // Starts loading once it scrolls
-        // setTimeout(
-        //   () => Helpers.launchViewer("viewerDiv", tile.urn, tile.key),
-        //   300
-        // );
-      }
-  
-  
+  onTileSelect(tile, e) {
+    e.preventDefault();
+    console.log("Launching "+ tile.title +" model");
+    Helpers.loadNextModel(tile.urn);
+  }
+   
   render () {
     return (
       <div id='side-bar'>
