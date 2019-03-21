@@ -53,19 +53,7 @@ function onDocumentLoadSuccess(doc) {
     viewer.loadExtension('Viewing.Extension.Transform');
     viewer.addEventListener(Autodesk.Viewing.AGGREGATE_SELECTION_CHANGED_EVENT,onSelection);
 
-    
-   
-       //load model.
-    //    viewer.addEventListener(Autodesk.Viewing.GEOMETRY_LOADED_EVENT, onGeometryLoadedHandler);
-    //    viewer.addEventListener(Autodesk.Viewing.AGGREGATE_SELECTION_CHANGED_EVENT,onSelection);
-    //    viewer.prefs.tag('ignore-producer');
-       
-       //viewer.impl.disableRollover(true); removed for viewer version 3.2
-    //    viewer.loadExtension(ModelTransformerExtension, {
-    //         parentControl: 'modelTools',
-    //         autoLoad: true
-    //    })  
-       // Choose any of the available viewables.
+    // Choose any of the available viewables.
     var indexViewable = 0;
     var lmvDoc = doc;
    
