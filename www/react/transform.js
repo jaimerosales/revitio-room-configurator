@@ -48,13 +48,22 @@
       return q;
     }
 
+    function setTranslation(pointdata) {
+
+      var x = pointdata.point.x - 9;
+      var y = pointdata.point.y - 9;
+      var z = pointdata.point.z + 3.5;
+
+      return new THREE.Vector3(x, y, z);
+    }
+
     /////////////////////////////////////////////////////////////
     // Builds transform matrix
     //
     /////////////////////////////////////////////////////////////
-    function buildTransformMatrix() {
-      console.log('Im inside of transform');
-      var t = getTranslation();
+    function buildTransformMatrix(points) {
+      console.log('Im inside of transform', points);
+      var t = setTranslation(points);
       var r = getRotation();
       var s = getScale();
       console.log('Value T', t);

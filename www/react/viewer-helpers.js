@@ -1,10 +1,13 @@
 import RequestUtils from '../utils/request_utils';
 import Transform from './transform';
+import EventTool from './Viewer.EventTool';
 
+var pointer;
 var viewer;
+var pointData ={};
 
 function launchViewer(documentId) {
-    RequestUtils.getRequest('/token').then(token => {
+    RequestUtils.getRequest('/token').then(token => {  
         let options = {
           env: 'AutodeskProduction',
           getAccessToken: (onGetAccessToken) => {
@@ -40,15 +43,17 @@ function onDocumentLoadSuccess(doc) {
         console.error('Document contains no viewables.');
         return;
     }
+
+    var eventTool = new EventTool(viewer)
+    eventTool.activate()
+    eventTool.on('singleclick', (event) => {
+        pointer = event
+    })
    
     viewer.loadExtension('Viewing.Extension.Transform');
+    viewer.addEventListener(Autodesk.Viewing.AGGREGATE_SELECTION_CHANGED_EVENT,onSelection);
 
-
-    //    var eventTool = new EventTool(viewer)
-    //    eventTool.activate()
-    //    eventTool.on('singleclick', (event) => {
-    //        pointer = event
-    //    })
+    
    
        //load model.
     //    viewer.addEventListener(Autodesk.Viewing.GEOMETRY_LOADED_EVENT, onGeometryLoadedHandler);
@@ -86,7 +91,7 @@ function loadModel(viewables, lmvDoc, indexViewable) {
             lmvDoc.myData.guid.toString() === "dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6amFpbWVfcm9vbV9jb25maWd1cmF0b3JfcmV2aXRpb19za2V0Y2hpdC9yZWZyaWdlcmF0b3IucnZ0" || 
             lmvDoc.myData.guid.toString() === "dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6amFpbWVfcm9vbV9jb25maWd1cmF0b3JfcmV2aXRpb19za2V0Y2hpdC9FbGVjdHJpY2FsU3RvdmUucnZ0" ){
             modelOptions = {
-                placementTransform: Transform.buildTransformMatrix()
+                placementTransform: Transform.buildTransformMatrix(pointData)
             };
         }
         else {
@@ -116,14 +121,14 @@ function loadModel(viewables, lmvDoc, indexViewable) {
     })
 }
 
-   
-  
 function onSelection (event) {
+    debugger;
     if (event.selections && event.selections.length) {
         pointData = viewer.clientToWorld(
             pointer.canvasX,
             pointer.canvasY,
             true)
+        console.log(pointData);
     }
 }
 
@@ -137,35 +142,3 @@ const Helpers = {
 };
 
   export default Helpers;
-
-
-
-
-
-
-
-   // function launchViewer (urn) {
-    //     RequestUtils.getRequest('/token').then(token => {
-    //       let options = {
-    //         env: 'AutodeskProduction',
-    //         getAccessToken: (onGetAccessToken) => {
-    //                 var accessToken = token.access_token;
-    //                 var expireTimeSeconds = 60 * 30;
-    //                 onGetAccessToken(accessToken, expireTimeSeconds);
-    //         }
-    //       };
-    //       console.log(options);
-    //       Autodesk.Viewing.Initializer(options, () => {
-    //         let viewerApp = new Autodesk.Viewing.ViewingApplication('forge-viewer');
-    //         viewerApp.registerViewer(viewerApp.k3D, Autodesk.Viewing.Private.GuiViewer3D);
-    //         viewerApp.loadDocument(urn, (doc) => {
-    //           let viewables = viewerApp.bubble.search({'type':'geometry'});
-    //           if (viewables.length === 0) {
-    //             console.error('Document contains no viewables.');
-    //             return;
-    //           }
-    //           viewerApp.selectItem(viewables[0], null, console.error);
-    //         }, console.error);
-    //       });
-    //     });
-    //   }
