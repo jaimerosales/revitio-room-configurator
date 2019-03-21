@@ -81,8 +81,10 @@ function loadModel(viewables, lmvDoc, indexViewable) {
         var svfUrl = lmvDoc.getViewablePath(initialViewable);
         var modelOptions;
         
-        if (lmvDoc.myData.guid.toString() === "dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6amFpbWVfcm9vbWNvbmZpZ3VyYXRvcl9za2V0Y2hpdF9yZXZpdGlvL3RhYmxlLnJ2dA" || 
-            lmvDoc.myData.guid.toString() === "dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6amFpbWVfcm9vbWNvbmZpZ3VyYXRvcl9za2V0Y2hpdF9yZXZpdGlvL2NoYWlyLnJ2dA" ){
+        if (lmvDoc.myData.guid.toString() === "dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6amFpbWVfcm9vbV9jb25maWd1cmF0b3JfcmV2aXRpb19za2V0Y2hpdC90YWJsZS5ydnQ" || 
+            lmvDoc.myData.guid.toString() === "dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6amFpbWVfcm9vbV9jb25maWd1cmF0b3JfcmV2aXRpb19za2V0Y2hpdC9jaGFpci5ydnQ" ||
+            lmvDoc.myData.guid.toString() === "dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6amFpbWVfcm9vbV9jb25maWd1cmF0b3JfcmV2aXRpb19za2V0Y2hpdC9yZWZyaWdlcmF0b3IucnZ0" || 
+            lmvDoc.myData.guid.toString() === "dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6amFpbWVfcm9vbV9jb25maWd1cmF0b3JfcmV2aXRpb19za2V0Y2hpdC9FbGVjdHJpY2FsU3RvdmUucnZ0" ){
             modelOptions = {
                 placementTransform: Transform.buildTransformMatrix()
             };
@@ -96,7 +98,7 @@ function loadModel(viewables, lmvDoc, indexViewable) {
         viewer.loadModel(svfUrl, modelOptions); 
 
         // add grid
-        let grid = new THREE.GridHelper(400, 10);
+        let grid = new THREE.GridHelper(800, 10);
         
         grid.position.x = 100;
         grid.position.y = 100;
