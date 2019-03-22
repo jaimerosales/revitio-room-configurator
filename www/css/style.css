@@ -129,7 +129,7 @@ html, body {
 
 .tn-button-green {
   cursor: pointer;
-  background-color: #3d9970;
+  background-color: #3aa2a0;
 }
 
 .tn-button-green:active, .tn-button-green:hover, .tn-button-image:active, .tn-button-image:hover  {
@@ -140,13 +140,13 @@ html, body {
 .tn-button-yellow1 {
   cursor: not-allowed;
   color: #dd0000;
-  background-color: #c1a44a;
+  background-color: #bfc63c;
 }
 
 .tn-button-yellow2 {
   cursor: not-allowed;
   color: #dd0000;
-  background-color: #e3c66c;
+  background-color: #f2e425;
 }
 
 .tn-button-image {

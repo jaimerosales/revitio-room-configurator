@@ -1,12 +1,17 @@
 import RequestUtils from '../utils/request_utils';
 import Transform from './transform';
 import EventTool from './Viewer.EventTool';
+import base64 from 'base-64';
 
 var pointer;
 var viewer;
 var pointData ={};
 
-function launchViewer(documentId) {
+function launchViewer(modelName) {
+    RequestUtils.getRequest('/bucket').then(bucket => {
+        this.myBucket = bucket;
+      });
+
     RequestUtils.getRequest('/token').then(token => {  
         let options = {
           env: 'AutodeskProduction',
@@ -16,6 +21,8 @@ function launchViewer(documentId) {
                   onGetAccessToken(accessToken, expireTimeSeconds);
           }
         };
+
+        let documentId = 'urn:' + base64.encode('urn:adsk.objects:os.object:' + this.myBucket + '/' + modelName);
         var viewerDiv = document.getElementById('forge-viewer');
         viewer = new Autodesk.Viewing.Private.GuiViewer3D(viewerDiv);
         Autodesk.Viewing.Initializer(options, function onInitialized(){

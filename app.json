@@ -1,0 +1,27 @@
+{
+    "name": "forge-da4r-roomconfigurator",
+    "description": "Autodesk Forge Room Configurator",
+    "repository": "https://github.com/jaimerosales/revitio-room-configurator",
+    "logo": "https://avatars0.githubusercontent.com/u/8017462?v=3&s=200",
+    "keywords": [
+      "express",
+      "framework",
+      "autodesk",
+      "forge",
+      "template",
+      "Viewer"
+    ],
+    "env": {
+      "FORGE_CLIENT_ID": {
+        "description": "Forge Client ID"
+      },
+      "FORGE_CLIENT_SECRET": {
+        "description": "Forge Client Secret"
+      },
+      "FORGE_ACTIVITY_ID": {
+        "description": "Forge DA4R Activity Id"
+      }
+    },
+    "website": "https://forge.autodesk.com/",
+    "success_url": "/"
+  }
