@@ -7,5 +7,15 @@ The sketcher is built using [Redux](https://redux.js.org) with [React](https://r
 ### Demo
 https://s3.amazonaws.com/revitio/documentation/SketchIt.mp4
 
-### Heroku
-https://sketchitapp.herokuapp.com
+## Deploy on Heroku
+
+To deploy this project to Heroku, be sure to set your environment variables in the dashboard:
+
+- `FORGE_CLIENT_ID`
+- `FORGE_CLIENT_SECRET`
+- `FORGE_BUCKET_KEY`
+- `FORGE_ACTIVITY_ID`
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
+Watch [this video](https://www.youtube.com/watch?v=Oqa9O20Gj0c) on how deploy this sample to Heroku.

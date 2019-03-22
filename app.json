@@ -18,6 +18,9 @@
       "FORGE_CLIENT_SECRET": {
         "description": "Forge Client Secret"
       },
+      "FORGE_BUCKET_KEY": {
+        "description": "Forge Bucket value"
+      },
       "FORGE_ACTIVITY_ID": {
         "description": "Forge DA4R Activity Id"
       }
