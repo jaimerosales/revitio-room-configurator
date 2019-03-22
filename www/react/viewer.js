@@ -7,7 +7,7 @@ import Helpers from './viewer-helpers';
 class Viewer extends React.Component {
   componentDidMount () {
     console.log(this.myBucket);
-    let documentId = 'urn:' + base64.encode('urn:adsk.objects:os.object:' + 'jaime_room_configurator_revitio_sketchit' + '/' + this.props.modelName);
+    let documentId = 'urn:' + base64.encode('urn:adsk.objects:os.object:' + 'jaime_room_configurator_revitio' + '/' + this.props.modelName);
     console.log(documentId);
     
     Helpers.launchViewer(documentId);
