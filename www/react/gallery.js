@@ -71,7 +71,7 @@ class Gallery extends React.Component {
                 <div className="row">
                     {tilesData.map((tile, index) =>
                     (
-                        <div className="col-md-4 col-sm-6 tile" key={index}>
+                        <div className="col col-sm-6 tile" key={index}>
                         <a href="#" onClick={this.onTileSelect.bind(this, tile)}>
                             <img className="tile-avatar" src={tile.img} alt={tile.title} />
                         </a>
