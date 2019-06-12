@@ -65,7 +65,7 @@ class Editor extends React.Component {
   };
 
   generateElements (temp) {
-    let points = this.getPoints(temp);
+    let points = this.getPoints(temp);  
     return this.props.generateElems(points, temp);
   };
 

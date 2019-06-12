@@ -87,6 +87,7 @@ app.post('/translationcomplete', (req, res) => {
 });
 
 app.post('/create', (req, res) => {
+  console.log(JSON.stringify(req.body))
   let {elements} = req.body;
   let fileId = shortid.generate() + '.rvt';
   AppUtils.addJobDetails(fileId);

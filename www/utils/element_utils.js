@@ -29,6 +29,7 @@ class ElementUtils {
     }
 
     let first = points[0];
+    //console.log ('first points',first);
     return [new Floor(ElementUtils.getCurvesFromPoints(points.concat([first])))];
   };
 };

@@ -6,19 +6,8 @@ import Helpers from './viewer-helpers';
 
 class Viewer extends React.Component {
   componentDidMount () {
-    
-    // let documentId = 'urn:' + base64.encode('urn:adsk.objects:os.object:' + 'jaime_room_configurator_revitio' + '/' + this.props.modelName);
-    // console.log(documentId);
-    
     Helpers.launchViewer(this.props.modelName);
   };
-
-  // myBucket (){
-  //   RequestUtils.getRequest('/bucket').then(bucket => {
-  //     this.myBucket = bucket;
-  //   })
-  //   return this.myBucket;
-  // };
 
   render () {
     return (

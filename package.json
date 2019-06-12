@@ -57,6 +57,6 @@
     "browserify": "16.2.3",
     "browserify-css": "0.14.0",
     "minifyify": "7.3.5",
-    "ngrok": "3.1.1"
+    "ngrok": "^3.1.1"
   }
 }
