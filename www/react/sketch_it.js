@@ -13,7 +13,7 @@ let HeaderView = () => (
 
 let FooterView = () => (
   <div id="footer">
-    &copy; Copyright 2019 Autodesk Forge
+    &copy; Copyright 2022 Autodesk Platform Services
   </div>
 );
 

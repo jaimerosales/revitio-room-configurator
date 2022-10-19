@@ -24,7 +24,7 @@ html, body {
 }
 
 #header, #footer {
-  background: #88A0C2;
+  background: #000000;
   color: #F6F8FD;
   text-align: center;
 }
@@ -50,15 +50,16 @@ html, body {
   overflow: hidden;
 }
 
-#forge-logo {
+#aps-logo {
   position: absolute;
+  width: 20%;
   top: 80px;
   left: 30px;
   z-index: 2; 
 }
 
 #logo-size {
-  width: 25%; 
+  width: 100%; 
 }
 
 #canvas {
@@ -74,7 +75,7 @@ html, body {
 
 #side-bar {
   grid-area: sidebar;
-  background: #C0CFE2;
+  background: #666666;
   border: 2px solid black;
   border-left: none;
   display: grid;
@@ -129,7 +130,7 @@ html, body {
 
 .tn-button-green {
   cursor: pointer;
-  background-color: #3aa2a0;
+  background-color: #2bc275;
 }
 
 .tn-button-green:active, .tn-button-green:hover, .tn-button-image:active, .tn-button-image:hover  {
@@ -137,16 +138,16 @@ html, body {
   transform: translateY(3px);
 }
 
-.tn-button-yellow1 {
+.tn-button-yellow {
   cursor: not-allowed;
-  color: #dd0000;
-  background-color: #bfc63c;
+  color: #d74e26;
+  background-color: #ffc21a;
 }
 
-.tn-button-yellow2 {
+.tn-button-blue {
   cursor: not-allowed;
-  color: #dd0000;
-  background-color: #f2e425;
+  color: #d74e26;
+  background-color: #5f60ff;
 }
 
 .tn-button-image {
@@ -175,7 +176,7 @@ html, body {
 
 .forge-gallery .tile .tile-avatar {
   border-radius: 5px;
-  box-shadow: 1px 1px 5px 1px rgb(27, 52, 106);
+  box-shadow: 1px 1px 5px 1px rgb(204, 204, 204);
   height: auto;
   max-width: 100%;
 }
@@ -183,7 +184,7 @@ html, body {
 .forge-gallery .tile .tile-title {
   bottom: 0;
   width: 81%;
-  background-color: rgba(80, 80, 80, .5);
+  background-color: rgba(102, 102, 102, .5);
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   bottom: 0;

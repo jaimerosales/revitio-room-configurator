@@ -68,13 +68,13 @@ class Thumbnail extends React.Component {
         </span>
       </div>);
     } else if (!this.props.modelWorkitemDone) {
-      return (<div className={classNames('tn-button', 'tn-button-yellow1')}>
+      return (<div className={classNames('tn-button', 'tn-button-yellow')}>
         <span className='tn-button-span'>
           Creating {this.props.modelName}
         </span>
       </div>);
     } else if (!this.props.modelThumbnail) {
-      return (<div className={classNames('tn-button', 'tn-button-yellow2')}>
+      return (<div className={classNames('tn-button', 'tn-button-blue')}>
         <span className='tn-button-span'>
           Publishing {this.props.modelName}
         </span>

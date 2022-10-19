@@ -27,13 +27,13 @@
     "bootstrap": "4.3.1",
     "classnames": "2.2.6",
     "debounce": "1.2.0",
-    "ejs": "2.6.1",
+    "ejs": "^3.1.8",
     "es6-promisify": "6.0.1",
     "express": "4.16.4",
     "forge-apis": "0.4.5",
     "gl-matrix": "3.0.0",
     "is-url": "1.2.4",
-    "jquery": "3.3.1",
+    "jquery": "^3.6.1",
     "popper.js": "1.14.7",
     "react": "16.8.4",
     "react-dom": "16.8.4",
@@ -43,8 +43,8 @@
     "request": "2.88.0",
     "serve-favicon": "2.5.0",
     "shortid": "2.2.14",
-    "socket.io": "2.2.0",
-    "socket.io-client": "2.2.0"
+    "socket.io": "^2.5.0",
+    "socket.io-client": "^2.5.0"
   },
   "devDependencies": {
     "babel-cli": "6.26.0",
@@ -55,7 +55,7 @@
     "babel-preset-react": "6.24.1",
     "babelify": "^8.0.0",
     "browserify": "16.2.3",
-    "browserify-css": "0.14.0",
+    "browserify-css": "^0.15.0",
     "minifyify": "7.3.5",
     "ngrok": "^3.1.1"
   }
